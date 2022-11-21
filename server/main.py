@@ -24,6 +24,6 @@ def create_position(position: schemas.PositionBase, db: Session = Depends(get_db
 
 
 @app.get("/positions", response_model=list[schemas.Position])
-def get_positions(db: Session = Depends(get_db)):
-    positions = crud.get_positions(db)
+def get_positions(game: str, db: Session = Depends(get_db)):
+    positions = crud.get_positions(db, game)
     return positions

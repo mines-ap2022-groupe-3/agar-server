@@ -8,7 +8,7 @@ pip install -r requirements.txt
 ## Start server
 
 ```
-unicorn server.main:app --reload
+uvicorn server.main:app --reload
 ```
 
 
